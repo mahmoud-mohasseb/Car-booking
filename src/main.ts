@@ -7,7 +7,12 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.useGlobalPipes(new ValidationPipe());
   app.enableCors();
-  await app.listen(process.env.PORT || 9000);
+  await app.listen(process.env.PORT || 9000).then(({ url }) => {
+    console.log(`
+      🚀  Server is ready at ${url}
+      📭  Query at https://studio.apollographql.com/dev
+    `);
+  });
   // if (module.hot) {
   //   module.hot.accept();
   //   module.hot.dispose(() => app.close());
