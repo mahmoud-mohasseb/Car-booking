@@ -1,7 +1,10 @@
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
 </p>
-in package.json  "start:prod": "node dist/main",     "prestart:prod": "npm run build",
+  in package.json
+ "start:prod": "node dist/main",    
+ "prestart:prod": "npm run build",
+  web: npm run migration:run && npm run start:prod
   
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
